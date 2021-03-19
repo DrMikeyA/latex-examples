@@ -1,6 +1,6 @@
 # Latex Samples
 
-This repository contains a few latex samples I have snippeted when working on my CV.
+This repository contains a few latex samples (OK... sample... ) I snipped when working on my CV.
 
 Based on the skeleton here:[https://github.com/michaelmior/latex-skeleton](https://mg.readthedocs.io/latexmk.html "Michael Mior Latex Skeleton")
 
