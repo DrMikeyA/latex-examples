@@ -6,8 +6,11 @@ Based on the skeleton here:[https://github.com/michaelmior/latex-skeleton](https
 
 ## Conditional On Environment Variable
 
-`get_env_conditional.tex` - uses the value in an environment variable to display text or not.
+`get_env.tex` - uses the value in an environment variable to display text or not.
 
-`make get_env` builds it. `export TEST="Some Text"` to have the document display "Some Text". `unset TEST` to reset
+`make get_env_true.pdf` builds `get_env.pdf` with conditional text.
+`make get_env_false.pdf` builds `get_env_pdf` without conditional text.
+
+The recipe does `export TEST="Some Text"` to have the document display "Some Text".
 
 Shamelessly taken from [The Great Stack Overflow...](https://tex.stackexchange.com/questions/286902/latex-if-condition)
