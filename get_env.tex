@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\ExplSyntaxOn
+
+\NewDocumentCommand{\getenv}{om}
+ {
+  \sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
+  \tl_trim_spaces:N \l_tmpa_tl
+  \IfNoValueTF { #1 }
+   {
+    \tl_use:N \l_tmpa_tl
+   }
+   {
+    \tl_set_eq:NN #1 \l_tmpa_tl
+   }
+ }
+
+\ExplSyntaxOff
+
+
+\begin{document}
+
+\title{}
+
+\maketitle
+
+
+% \if\getenv{TEST}
+% \if\getenv{TEST}\1
+% Set
+
+% \else
+% Not Set
+% \fi
+
+
+\begin{abstract}
+
+\ifx\getenv{TEST}\undefined
+Appears the env variable `TEST` is not set
+\else
+\getenv{TEST}
+\fi
+
+\end{abstract}
+
+\bibliographystyle{abbrv}
+\bibliography{paper}
+
+\end{document}
