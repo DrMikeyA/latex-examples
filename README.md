@@ -9,6 +9,7 @@ Based on the skeleton here:[https://github.com/michaelmior/latex-skeleton](https
 `get_env.tex` - uses the value in an environment variable to display text or not.
 
 `make get_env_true.pdf` builds `get_env.pdf` with conditional text.
+
 `make get_env_false.pdf` builds `get_env_pdf` without conditional text.
 
 The recipe does `export TEST="Some Text"` to have the document display "Some Text".
