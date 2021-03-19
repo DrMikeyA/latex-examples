@@ -20,10 +20,10 @@ all: paper.pdf get_env_true.pdf get_env_false.pdf
 paper.pdf: paper.tex paper.bib
 	latexmk -pdf -pdflatex="pdflatex -interactive=nonstopmode" -use-make paper.tex
 
-get_env_true.pdf: get_env.tex paper.bib
+get_env_true.pdf: clean get_env.tex paper.bib
 	TEST="This is an awesome test" latexmk -pdf -pdflatex="pdflatex -interactive=nonstopmode" -use-make get_env.tex
 
-get_env_false.pdf: get_env.tex paper.bib
+get_env_false.pdf: clean get_env.tex paper.bib
 	latexmk -pdf -pdflatex="pdflatex -interactive=nonstopmode" -use-make get_env.tex
 
 clean:
